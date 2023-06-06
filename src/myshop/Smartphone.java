@@ -1,4 +1,4 @@
-package java.shop;
+package myshop;
 
 public class Smartphone extends Product {
   private String IMEI;
@@ -24,5 +24,12 @@ public class Smartphone extends Product {
   
   public void setMemory(int memory) {
     this.memory = memory;
+  }
+  @Override
+  public String toString() {
+    return "Smartphone {" +
+      "imei=" + IMEI +
+      ", memoria=" + memory +
+      "} " + super.toString();
   }
 }

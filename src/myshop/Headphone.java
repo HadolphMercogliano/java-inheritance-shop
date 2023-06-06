@@ -1,4 +1,4 @@
-package java.shop;
+package myshop;
 
 public class Headphone extends Product {
   private String color;
@@ -24,5 +24,12 @@ public class Headphone extends Product {
   
   public void setCabled(boolean cabled) {
     isCabled = cabled;
+  }
+  @Override
+  public String toString() {
+    return "Cuffie {" +
+      "colore='" + color + '\'' +
+      ", cable=" + isCabled +
+      "} " + super.toString();
   }
 }

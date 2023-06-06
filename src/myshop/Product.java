@@ -1,4 +1,4 @@
-package java.shop;
+package myshop;
 
 
 public class Product {
@@ -57,5 +57,14 @@ public class Product {
   public String getFullName() {
     return getCode() + "-" + nome;
   }
-  
+  @Override
+  public String toString() {
+    return "Prodotto{" +
+      "codice=" + codice +
+      ", nome='" + nome +
+      ", descrizione='" + descrizione +
+      ", prezzo=" + prezzo +
+      ", iva=" + iva +
+      '}';
+  }
 }

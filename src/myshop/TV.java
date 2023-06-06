@@ -1,4 +1,4 @@
-package java.shop;
+package myshop;
 
 public class TV extends Product {
   private int dimension;
@@ -24,5 +24,12 @@ public class TV extends Product {
   
   public void setSmart(boolean smart) {
     isSmart = smart;
+  }
+  public String toString() {
+    return "Televisore {" +
+      
+      ", dimensione=" + dimension + '"' +
+      ", smart=" + isSmart +
+      "} " + super.toString();
   }
 }
