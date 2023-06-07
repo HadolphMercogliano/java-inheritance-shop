@@ -28,8 +28,13 @@ public class Headphone extends Product {
   @Override
   public String toString() {
     return "Cuffie {" +
-      "colore='" + color + '\'' +
-      ", cable=" + isCabled +
-      "} " + super.toString();
+      "codice = " + getCode() +
+      ", nome = " + getNome() +
+      ", descrizione = " + getDescrizione() +
+      ", prezzo = " + getPrezzo() +
+      ", iva =" + getIva() +
+      "colore = " + color +
+      ", cable = " + isCabled +  '"' +
+      " }";
   }
 }

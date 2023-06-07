@@ -27,9 +27,13 @@ public class TV extends Product {
   }
   public String toString() {
     return "Televisore {" +
-      
-      ", dimensione=" + dimension + '"' +
-      ", smart=" + isSmart +
-      "} " + super.toString();
+      "codice =" + getCode() +
+      ", nome =" + getNome() +
+      ", descrizione =" + getDescrizione() +
+      ", prezzo =" + getPrezzo() +
+      ", iva =" + getIva() +
+      ", dimensione =" + dimension +
+      ", smart =" + isSmart +
+      " }";
   }
 }

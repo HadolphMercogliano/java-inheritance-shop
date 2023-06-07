@@ -27,9 +27,14 @@ public class Smartphone extends Product {
   }
   @Override
   public String toString() {
-    return "Smartphone {" +
-      "imei=" + IMEI +
-      ", memoria=" + memory +
-      "} " + super.toString();
+      return "Smartphone {" +
+      "codice =" + getCode() +
+      ", nome =" + getNome() +
+      ", descrizione =" + getDescrizione() +
+      ", prezzo =" + getPrezzo() +
+      ", iva =" + getIva() +
+      ", imei =" + IMEI +
+      ", memoria =" + memory +
+      " }";
   }
 }

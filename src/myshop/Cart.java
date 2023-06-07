@@ -8,21 +8,30 @@ public class Cart {
     Scanner scanner = new Scanner(System.in);
     
 //  inserisci il numero di prodotti che vuoi acquistare
-//  al termine dell' inserimento stampa il riepilogo carrello (metodo toString)
     System.out.println("Quanti prodotti vuoi acquistare?");
     int nProdotti = scanner.nextInt();
     Product[] cart = new Product[nProdotti];
+    
     for (int i = 0; i < nProdotti; i++) {
+    
 //  chiedi all' utente di specificare la classe di prodotto che vuole acquistare'(smartphone tv hf)
       System.out.println("Inserisci la tipologia di prodotto");
-      System.out.println("1 per Smartphone");
+      System.out.println("""
+      1 per Smartphone
+      2 per Tv
+      3 per Cuffie
+      """);
       System.out.println("2 per Tv");
       System.out.println("3 per Cuffie");
 
       int scelta;
+      do {
       System.out.print("Scelta: ");
       scelta = scanner.nextInt();
       scanner.nextLine();
+      }
+      while(scelta<1 || scelta>3);
+      
 //  fill i campi del prodotto con i dati del constructor
       System.out.println("Inserisci il nome del prodotto");
       String nome = scanner.nextLine();
@@ -57,18 +66,20 @@ public class Cart {
           cart[i] = new TV(nome,descrizione,prezzo,iva,dimension,isSmart);
         }
         case 3 -> {
-          System.out.println("Inserisci la dimensione in pollici del prodotto");
+          System.out.println("Inserisci il colore del prodotto");
           String color = scanner.nextLine();
-          scanner.nextLine();
-          System.out.println("Inserisci la memoria del prodotto");
+          
+          System.out.println("Se le cuffie sono cablate inserisci 'true' se no inserisci 'false'");
           boolean isCabled = scanner.nextBoolean();
           scanner.nextLine();
           cart[i] = new Headphone(nome,descrizione,prezzo,iva,color,isCabled);
         }
 
-        default -> System.out.println("Scelta non valida. Riprova.");
+//        default -> System.out.println("Scelta non valida. Riprova.");
+        
       }
     }
+//  al termine dell' inserimento stampa il riepilogo carrello (metodo toString)
     System.out.println("Il tuo carrello:");
     for (Product prodotto : cart) {
       System.out.println(prodotto.toString());
